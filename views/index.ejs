@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="styles/stylesheet.css" />
+</head>
+
+<body>
+    <div class="flex-container">
+
+        <a class="btn btn-outline-dark w-50" href="/post">Post</a>
+
+        <div class="card text-bg-dark" style="width: 75%">
+            <div class="card-body">
+                <h5 class="card-title">Lorem Ipsum</h5>
+                <input type="button" value="delete">
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                    consectetur facilisis dolor, non commodo quam ultricies at. Mauris
+                    eros nisi, faucibus eget enim non, lacinia suscipit lacus. Aenean et
+                    fringilla massa. Nunc interdum massa a massa blandit pharetra.
+                    Aenean sollicitudin mauris at est porttitor, in condimentum diam
+                    egestas. Cras condimentum vestibulum sapien quis tristique. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut
+                    hendrerit dui, quis viverra felis. <br /> Praesent consequat nisl vel
+                    odio convallis vestibulum. Nullam eget laoreet nunc. Quisque
+                    elementum condimentum pharetra. Pellentesque nec justo blandit,
+                    tempor metus vitae, viverra nunc. Vestibulum sit amet enim nec nisi
+                    placerat egestas rutrum eget elit. Phasellus et mauris risus.
+                    Vestibulum turpis erat, vestibulum imperdiet dignissim vel, egestas
+                    in nisi. Ut rhoncus ex interdum dolor viverra, ac consequat eros
+                    tincidunt. Phasellus feugiat ullamcorper augue quis sagittis.
+                    Integer elementum elementum rhoncus. Ut facilisis felis id dui
+                    sollicitudin, interdum sodales tortor tincidunt.
+                </p>
+            </div>
+        </div>
+
+
+        <% for( let index=0; index < headings.length; index++ ) { %>
+
+
+            <div class="card text-bg-dark" style="width: 75%">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= headings[index] %>
+                    </h5>
+                    <p class="card-text">
+                        <%= paras[index] %>
+                    </p>
+                </div>
+            </div>
+
+
+            <% } %>
+
+            
+    </div>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Blog.io</a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/post">Post</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
