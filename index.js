@@ -17,6 +17,13 @@ app.get("/", (req, res)=>{
 
 })
 
+app.get("/delete/:index", (req,res)=>{
+    const id = req.params.index
+    titles.splice(id, 1);
+    articles.splice(id, 1);
+    res.redirect("/")
+})
+
 app.get("/post", (req, res)=>{
     res.render("post.ejs")
 })

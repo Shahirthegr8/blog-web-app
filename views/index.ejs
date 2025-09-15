@@ -21,7 +21,7 @@
             <div class="card-body">
                 <div class="card-nav">
                     <h5 class="card-title">Lorem Ipsum</h5>
-                    <input type="button" value="delete" class="btn btn-danger btn-sm" style="height: 1.5rem;">
+                    
                 </div>
                 <p class="card-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -51,10 +51,15 @@
 
             <div class="card text-bg-dark" style="width: 75%">
                 <div class="card-body">
-                    <h5 class="card-title">
-                        <%= headings[index] %>
-                    </h5>
-                    <p class="card-text">
+                    <div class="card-nav">
+                        <h5 class="card-title">
+                            <%= headings[index] %>
+                        </h5>
+                        <a href="/delete/<%= index %>" class="btn btn-danger btn-sm" style="font-size: smaller;">delete</a>
+                    </div>
+
+                    
+                    <p class="card-text"> 
                         <%= paras[index] %>
                     </p>
                 </div>
