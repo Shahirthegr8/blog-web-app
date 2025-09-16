@@ -23,3 +23,6 @@ start the server
 node index.js
 ```
 Open your browser and go to http//localhost:3000
+
+## Note
+Storage feature not added yet. App will reset once server stops.
