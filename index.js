@@ -27,6 +27,16 @@ app.get("/delete/:index", (req,res)=>{
     res.redirect("/")
 })
 
+app.get("/modify/:index", (req,res)=>{
+    const id = req.params.index
+    const send = {
+        title: titles[id],
+        text: articles[id],
+        index: id
+    }
+    res.render("modify.ejs", send)
+})
+
 app.get("/post", (req, res)=>{
     res.render("post.ejs")
 })
@@ -36,7 +46,20 @@ app.post("/submit", (req, res)=>{
     articles.push(req.body["content"])
     const today = new Date();
     dates.push(months[today.getMonth()] + " " + today.getDate() + ", "+ today.getFullYear())
-    console.log(dates)
+    res.redirect("/")
+})
+
+app.post("/change", (req,res)=>{
+    titles.push(req.body["title"])
+    articles.push(req.body["content"])
+
+    const today = new Date();
+    dates.push(months[today.getMonth()] + " " + today.getDate() + ", "+ today.getFullYear())
+
+    titles.splice(req.body["id"], 1)
+    articles.splice(req.body["id"], 1)
+    dates.splice(req.body["id"])
+
     res.redirect("/")
 })
 

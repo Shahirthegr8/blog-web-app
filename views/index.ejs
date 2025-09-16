@@ -55,7 +55,11 @@
                         <h5 class="card-title">
                             <%= headings[index] %>
                         </h5>
-                        <a href="/delete/<%= index %>" class="btn btn-danger btn-sm" style="font-size: smaller;">delete</a>
+                        <div class="card-buttons">
+                            <a href="/delete/<%= index %>" class="btn btn-outline-danger btn-sm" style="font-size: smaller;">delete</a>
+                            <a href="/modify/<%= index %>" class="btn btn-outline-light btn-sm" style="font-size: smaller;">Modify</a>
+                        </div>
+                        
                     </div>
                     
                     <p class="blog-post-meta" style="color: #727272;"><%= date[index] %> by <a href="#">Shaheer</a></p>
