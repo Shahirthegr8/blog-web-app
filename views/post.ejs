@@ -18,25 +18,30 @@
   <body>
     <div class="form-container">
       <form class="post-form" action="/submit" method="POST" >
-        <h1 class="h3 mb-3 fw-normal">Write a blog</h1>
-        <div class="form-floating mb-3">
+        <h1 class="h3 mb-3 fw-normal text-dark-emphasis">Write a blog</h1>
+        <div class="mb-3">
+
+          <label for="floatingTitle">Title</label>
+
           <textarea
-            class="form-control"
-            placeholder="Leave a comment here"
+            class="form-control tb"
             id="floatingTitle"
             name="title"
           ></textarea>
-          <label for="floatingTitle">Title</label>
+          
         </div>
-        <div class="form-floating mb-3">
+        
+
+        <div class="mb-3">
+          <label for="floatingTextarea">Content</label>
           <textarea
-            class="form-control"
-            placeholder="Leave a comment here"
+            class="form-control tb"
             id="floatingTextarea"
             style="height: 20rem;"
             name="content"
+            
           ></textarea>
-          <label for="floatingTextarea">Content</label>
+          
         </div>
         <button class="btn btn-dark w-100 py-2" type="submit">
           Post

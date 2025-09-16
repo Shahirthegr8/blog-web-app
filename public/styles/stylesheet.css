@@ -28,3 +28,26 @@
 a{
     color:rgb(70, 109, 164);
 }
+
+body{
+    background-color: #121212;
+    
+}
+
+p{
+    color: #dee2e6;
+    
+}
+.tb{
+    color: #dee2e6;
+    background-color: #212529;
+}
+label{
+    color: #dee2e6;
+}
+.form-control:focus {
+  background-color: #212529;   /* keep dark bg when focused */
+  color: #f8f9fa;
+  border-color: #58a6ff;       /* optional: blue accent border */
+  box-shadow: none;            /* remove Bootstrap’s glow */
+}

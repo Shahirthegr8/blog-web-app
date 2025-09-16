@@ -46,31 +46,54 @@ a{
     color:rgb(70, 109, 164);
 }
 
+body{
+    background-color: #121212;
+    
+}
+
+p{
+    color: #dee2e6;
+    
+}
+.tb{
+    color: #dee2e6;
+    background-color: #212529;
+}
+label{
+    color: #dee2e6;
+}
+.form-control:focus {
+  background-color: #212529;   /* keep dark bg when focused */
+  color: #f8f9fa;
+  border-color: #58a6ff;       /* optional: blue accent border */
+  box-shadow: none;            /* remove Bootstrap’s glow */
+}
+
     </style>
   </head>
 
   <body>
     <div class="form-container">
       <form class="post-form" action="/change" method="post">
-        <h1 class="h3 mb-3 fw-normal">Write a blog</h1>
-        <div class="form-floating mb-3">
+        <h1 class="h3 mb-3 fw-normal text-dark-emphasis">Write a blog</h1>
+        <div class="mb-3">
+          <label for="floatingTitle">Title</label>
           <textarea
-            class="form-control"
-            placeholder="Leave a comment here"
+            class="form-control tb"
             id="floatingTitle"
             name="title"
           ><%= title %></textarea>
-          <label for="floatingTitle">Title</label>
+          
         </div>
-        <div class="form-floating mb-3">
+        <div class="mb-3">
+          <label for="floatingTextarea">Content</label>
           <textarea
-            class="form-control"
-            placeholder="Leave a comment here"
+            class="form-control tb"
             id="floatingTextarea"
             style="height: 20rem;"
             name="content"
           ><%= text %></textarea>
-          <label for="floatingTextarea">Content</label>
+          
         </div>
         <button class="btn btn-dark w-100 py-2" type="submit" value=<%= index %> name="id">
           Post
