@@ -2,10 +2,10 @@
 Blog application to post and display articles on the web. Personal project to practice Node.js, express HTML and CSS.
 
 ## Features
-Post blog articles
-View blog articles
-Modify articles
-Delete articles
+- Post blog articles
+- View blog articles
+- Modify articles
+- Delete articles
 
 ## Installation
 Clone the repo and install dependencies.
