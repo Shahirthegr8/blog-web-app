@@ -46,6 +46,11 @@ app.post("/submit", (req, res)=>{
     articles.push(req.body["content"])
     const today = new Date();
     dates.push(months[today.getMonth()] + " " + today.getDate() + ", "+ today.getFullYear())
+
+    console.log(titles)
+    console.log(articles)
+    console.log(dates)
+
     res.redirect("/")
 })
 
@@ -58,8 +63,11 @@ app.post("/change", (req,res)=>{
 
     titles.splice(req.body["id"], 1)
     articles.splice(req.body["id"], 1)
-    dates.splice(req.body["id"])
+    dates.splice(req.body["id"], 1)
 
+    console.log(titles)
+    console.log(articles)
+    console.log(dates)
     res.redirect("/")
 })
 
