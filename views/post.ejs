@@ -19,7 +19,7 @@
     <div class="form-container">
       <form class="post-form" action="/submit" method="POST" >
         <h1 class="h3 mb-3 fw-normal text-dark-emphasis">Write a blog</h1>
-        <div class="mb-3">
+        <div class="mb-2">
 
           <label for="floatingTitle">Title</label>
 
@@ -32,17 +32,31 @@
         </div>
         
 
-        <div class="mb-3">
+        <div class="mb-2">
           <label for="floatingTextarea">Content</label>
           <textarea
             class="form-control tb"
             id="floatingTextarea"
-            style="height: 20rem;"
+            style="height: 18rem;"
             name="content"
             
           ></textarea>
           
         </div>
+
+        <div class="mb-2">
+
+          <label for="authorBox">Author</label>
+
+          <textarea
+            class="form-control tb"
+            id="authorBox"
+            name="author"
+            style="height: 2rem;"
+          ></textarea>
+          
+        </div>
+
         <button class="btn btn-dark w-100 py-2" type="submit">
           Post
         </button>

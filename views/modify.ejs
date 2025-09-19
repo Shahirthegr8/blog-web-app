@@ -76,7 +76,7 @@ label{
     <div class="form-container">
       <form class="post-form" action="/change" method="post">
         <h1 class="h3 mb-3 fw-normal text-dark-emphasis">Write a blog</h1>
-        <div class="mb-3">
+        <div class="mb-2">
           <label for="floatingTitle">Title</label>
           <textarea
             class="form-control tb"
@@ -85,16 +85,28 @@ label{
           ><%= title %></textarea>
           
         </div>
-        <div class="mb-3">
+        <div class="mb-2">
           <label for="floatingTextarea">Content</label>
           <textarea
             class="form-control tb"
             id="floatingTextarea"
-            style="height: 20rem;"
+            style="height: 18rem;"
             name="content"
           ><%= text %></textarea>
           
         </div>
+
+        <div class="mb-2">
+          <label for="authorBox">Title</label>
+          <textarea
+            class="form-control tb"
+            id="authorBox"
+            name="author"
+            style="height: 2rem;"
+          ><%= author %></textarea>
+          
+        </div>
+
         <button class="btn btn-dark w-100 py-2" type="submit" value=<%= index %> name="id">
           Post
         </button>
@@ -121,7 +133,7 @@ label{
               <a class="nav-link" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Post</a>
+              <a class="nav-link active" href="/post">Post</a>
             </li>
           </ul>
         </div>
